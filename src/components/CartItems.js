@@ -3,10 +3,11 @@ import CartItem from './CartItem';
 
 class CartItems extends Component {
   render() {
-    // console.log(this.props);
+    const { items } = this.props
+    console.log(items);
 
-    const { cartItemsList } = this.props;
-
+    // const { products } = this.props;
+    // console.log("products",products);
     return (
       <div className="container">
         <h1>Cart Items</h1>
@@ -18,7 +19,7 @@ class CartItems extends Component {
               <div className="col-md-2">Quantity</div>
             </div>
           </div>
-          {cartItemsList.map((item, i) => {
+          {items.map((item, i) => {
             return <CartItem key={i} item={item} />;
           })}
         </div>

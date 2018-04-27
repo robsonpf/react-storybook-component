@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 
 class CartItem extends Component {
   render() {
-    console.log(this.props);
-    const { product, quantity } = this.props.item;
+    const { product, quantity, id } = this.props.item
+
 
     return (
       <div className="list-group-item">
